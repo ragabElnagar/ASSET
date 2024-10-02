@@ -5,7 +5,7 @@ import { dataReducer } from "./redux/reducer";
 
  const store = configureStore({
     reducer: {
-      track:dataReducer
+      dataReducer
     }
   })
 export default store;

@@ -17,7 +17,7 @@ import {
 import getSubcategories from "../../utils/helpers/getSubcategories";
 
 function Home(props) {
-  const [isLoading, setIsLoading] = useState(true);
+  const { data, loading, getData } = props;
   const [searchByName, setSearchByName] = useState(
     getFromLocalStorage("searchByName", "")
   );
@@ -27,8 +27,7 @@ function Home(props) {
   );
 
   useEffect(() => {
-    props.getData();
-    setIsLoading(false);
+    getData();
     saveToLocalStorage("searchByName", searchByName);
     saveToLocalStorage("category", category);
     saveToLocalStorage("subcategory", subcategory);
@@ -39,9 +38,9 @@ function Home(props) {
     subcategory,
   };
 
-  const filteredItems = filterItems(props.data, filters, searchByName);
+  const filteredItems = filterItems(data, filters, searchByName);
 
-  const data = filteredItems.map((item) => {
+  const filteredData = filteredItems.map((item) => {
     return (
       <DataCard
         key={item.id}
@@ -92,10 +91,10 @@ function Home(props) {
         </Button>
       </Box>
       <Box className={styles.Data}>
-        {isLoading ? (
+        {loading ? (
           <CircularProgress className={styles.loadingSpinner} />
         ) : filteredItems.length > 0 ? (
-          data
+          filteredData
         ) : (
           <Typography className={styles.notDataFound} variant="h3">
             Not Data Found !!!
@@ -114,7 +113,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
-    data: state.track.data,
+    data: state.dataReducer.data,
+    loading: state.dataReducer.loading,
   };
 };
 
