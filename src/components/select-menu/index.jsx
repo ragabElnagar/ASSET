@@ -25,7 +25,13 @@ function getStyles(name, selected, theme) {
 }
 
 export default function MultipleSelect(props) {
-  const { items, placeholder, selected, setSelected, placeholderTitle } = props;
+  const {
+    items = [],
+    placeholder = "Select...",
+    selected = [],
+    setSelected,
+    placeholderTitle = "No options available",
+  } = props;
   const theme = useTheme();
 
   const handleChange = (event) => {

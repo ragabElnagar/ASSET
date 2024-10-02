@@ -6,7 +6,6 @@ import styles from "./styles.module.css";
 import { TextField, Box, Button, Typography } from "@mui/material";
 import MultipleSelect from "../../components/select-menu";
 import categoryItems from "../../utils/constants/category.json";
-import subcategoryItems from "../../utils/constants/subcategory.json";
 import filterItems from "../../utils/helpers/filterData";
 import CircularProgress from "@mui/material/CircularProgress";
 import {
@@ -28,35 +27,47 @@ function Home(props) {
 
   useEffect(() => {
     getData();
+  }, [getData]);
+
+  useEffect(() => {
     saveToLocalStorage("searchByName", searchByName);
     saveToLocalStorage("category", category);
     saveToLocalStorage("subcategory", subcategory);
   }, [searchByName, category, subcategory]);
 
-  const filters = {
-    category,
-    subcategory,
-  };
-
+  const filters = { category, subcategory };
   const filteredItems = filterItems(data, filters, searchByName);
 
-  const filteredData = filteredItems.map((item) => {
-    return (
+  const handleReset = () => {
+    setSearchByName("");
+    setCategory([]);
+    setSubcategory([]);
+    clearAllLocalStorage();
+  };
+
+  const renderDataCards = () => {
+    return filteredItems.map((item) => (
       <DataCard
         key={item.id}
         name={item.name}
         category={item.category}
         subcategory={item.subcategory}
       />
-    );
-  });
-
-  const handleRest = () => {
-    setSearchByName("");
-    setCategory([]);
-    setSubcategory([]);
-    clearAllLocalStorage();
+    ));
   };
+
+  let content;
+  if (loading) {
+    content = <CircularProgress className={styles.loadingSpinner} />;
+  } else if (filteredItems.length > 0) {
+    content = renderDataCards();
+  } else {
+    content = (
+      <Typography className={styles.notDataFound} variant="h3">
+        Not Data Found !!!
+      </Typography>
+    );
+  }
 
   return (
     <Box className={styles.Container}>
@@ -83,24 +94,14 @@ function Home(props) {
           setSelected={setSubcategory}
         />
         <Button
-          onClick={handleRest}
+          onClick={handleReset}
           className={styles.Button}
           variant="contained"
         >
           Rest
         </Button>
       </Box>
-      <Box className={styles.Data}>
-        {loading ? (
-          <CircularProgress className={styles.loadingSpinner} />
-        ) : filteredItems.length > 0 ? (
-          filteredData
-        ) : (
-          <Typography className={styles.notDataFound} variant="h3">
-            Not Data Found !!!
-          </Typography>
-        )}
-      </Box>
+      <Box className={styles.Data}>{content}</Box>
     </Box>
   );
 }

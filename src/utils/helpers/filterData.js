@@ -9,13 +9,14 @@ const filterItems = (items, filters, searchByName = "") => {
 
   return items.filter((item) => {
     const categoryMatch =
-      category.length > 0 ? category.includes(item.category) : true;
+        category.length > 0 ? category.includes(item.category) : true;
     const subcategoryMatch =
-      subcategory.length > 0 ? subcategory.includes(item.subcategory) : true;
+        subcategory.length > 0 ? subcategory.includes(item.subcategory) : true;
 
-      const nameMatch = searchByName.length > 3
-      ? item.name && item.name.toLowerCase().includes(normalizedSearchByName)
-      : true;
+    // Use optional chaining with ?. to avoid undefined errors
+    const nameMatch = searchByName.length > 3
+        ? item.name?.toLowerCase().includes(normalizedSearchByName)
+        : true;
 
     return categoryMatch && subcategoryMatch && nameMatch;
   });
