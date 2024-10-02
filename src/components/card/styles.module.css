@@ -1,12 +1,16 @@
 .card{
-    height: 180px;
+    /* height: 180px; */
     margin: 10px;
     width: 350px;
 }
 
-.title{
+.typography{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 15px !important
+}
+
+.title{
+    font-weight: bold;
 }

@@ -2,35 +2,40 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import CardMedia from '@mui/material/CardMedia';
 import styles from "./styles.module.css";
 
 export default function DataCard(props) {
   const { name, category, subcategory } = props;
   return (
     <Card sx={{ maxWidth: 345 }} className={styles.card}>
+       <CardMedia
+        sx={{ height: 260 }}
+        image="/assets/img.webp"
+        title="green iguana"
+      />
       <CardContent>
         <Typography
-          className={styles.title}
+          className={styles.typography}
           gutterBottom
           variant="h5"
           component="div"
         >
-          <span>name:</span> {name}
+          <span className={styles.title}>name:</span> {name}
         </Typography>
         <Typography
-          className={styles.title}
+          className={styles.typography}
           gutterBottom
           variant="h6"
           component="div"
         >
-          <span>category:</span> {category}
+          <span className={styles.title}>category:</span> {category}
         </Typography>
         <Typography
-          className={styles.title}
-          variant="body2"
-          sx={{ color: "text.secondary" }}
+          className={styles.typography}
+          variant="body1"
         >
-          <span>subcategory:</span> {subcategory}
+          <span className={styles.title}>subcategory:</span> {subcategory}
         </Typography>
       </CardContent>
     </Card>

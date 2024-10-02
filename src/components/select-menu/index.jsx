@@ -58,7 +58,7 @@ export default function MultipleSelect(props) {
           inputProps={{ "aria-label": "Without label" }}
         >
           <MenuItem disabled value="">
-            <em>{items.length == 0 && placeholderTitle}</em>
+            <em>{items.length == 0 ? placeholderTitle : placeholder}</em>
           </MenuItem>
           {items.map((name) => (
             <MenuItem
