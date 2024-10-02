@@ -1,0 +1,12 @@
+.card{
+    height: 180px;
+    margin: 10px;
+    width: 350px;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px !important
+}

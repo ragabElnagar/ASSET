@@ -1,0 +1,14 @@
+{
+  "Electronics": [
+    "Laptops",
+    "Headphones",
+    "Smartphones",
+    "Speakers",
+    "Gaming",
+    "Wearables"
+  ],
+  "Fashion": ["Footwear", "Accessories", "Clothing"],
+  "Books": ["Business"],
+  "Home & Kitchen": ["Appliances"],
+  "Furniture": ["Bedroom", "Office"]
+}

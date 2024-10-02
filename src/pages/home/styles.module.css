@@ -1,0 +1,28 @@
+.Container{
+    padding: 20px;
+    flex: 1;
+}
+.Data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ActionBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button{
+   width:120px;
+   height: 53px;
+}
+
+.notDataFound{
+    margin:178px 0 !important;
+}
+
+.loadingSpinner{
+    margin: 150px;
+}

@@ -1,0 +1,18 @@
+.footerContainer{
+    position: relative;
+    margin-top: 50px;
+}
+.footerBox{
+    width: 100%;
+    padding: 10px 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1976d2;
+    color: #fff;
+    text-align: center;
+}
+
+.footerTypography{
+    color: white;
+}

@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Apple MacBook Pro 16-inch",
+        "category": "Electronics",
+        "subcategory": "Laptops"
+    },
+    {
+        "id": 2,
+        "name": "Nike Air Max 270",
+        "category": "Fashion",
+        "subcategory": "Footwear"
+    },
+    {
+        "id": 3,
+        "name": "Sony WH-1000XM4",
+        "category": "Electronics",
+        "subcategory": "Headphones"
+    },
+    {
+        "id": 4,
+        "name": "The Lean Startup",
+        "category": "Books",
+        "subcategory": "Business"
+    },
+    {
+        "id": 5,
+        "name": "Samsung Galaxy S21",
+        "category": "Electronics",
+        "subcategory": "Smartphones"
+    },
+    {
+        "id": 6,
+        "name": "Adidas Ultraboost 21",
+        "category": "Fashion",
+        "subcategory": "Footwear"
+    },
+    {
+        "id": 7,
+        "name": "Dell XPS 13",
+        "category": "Electronics",
+        "subcategory": "Laptops"
+    },
+    {
+        "id": 8,
+        "name": "JBL Flip 5",
+        "category": "Electronics",
+        "subcategory": "Speakers"
+    },
+    {
+        "id": 9,
+        "name": "Ray-Ban Aviator Sunglasses",
+        "category": "Fashion",
+        "subcategory": "Accessories"
+    },
+    {
+        "id": 10,
+        "name": "Nintendo Switch",
+        "category": "Electronics",
+        "subcategory": "Gaming"
+    },
+    {
+        "id": 11,
+        "name": "Levi's 501 Original Jeans",
+        "category": "Fashion",
+        "subcategory": "Clothing"
+    },
+    {
+        "id": 12,
+        "name": "Instant Pot Duo 7-in-1",
+        "category": "Home & Kitchen",
+        "subcategory": "Appliances"
+    },
+    {
+        "id": 13,
+        "name": "Apple Watch Series 7",
+        "category": "Electronics",
+        "subcategory": "Wearables"
+    },
+    {
+        "id": 14,
+        "name": "IKEA Malm Bed Frame",
+        "category": "Furniture",
+        "subcategory": "Bedroom"
+    },
+    {
+        "id": 15,
+        "name": "Herman Miller Aeron Chair",
+        "category": "Furniture",
+        "subcategory": "Office"
+    },
+    {
+        "id": 16,
+        "name": "Bose QuietComfort 35 II",
+        "category": "Electronics",
+        "subcategory": "Headphones"
+    },
+    {
+        "id": 17,
+        "name": "ASUS ROG Zephyrus G14",
+        "category": "Electronics",
+        "subcategory": "Laptops"
+    },
+    {
+        "id": 18,
+        "name": "Fitbit Charge 5",
+        "category": "Electronics",
+        "subcategory": "Wearables"
+    },
+    {
+        "id": 19,
+        "name": "Nike Revolution 5",
+        "category": "Fashion",
+        "subcategory": "Footwear"
+    },
+    {
+        "id": 20,
+        "name": "Sony PlayStation 5",
+        "category": "Electronics",
+        "subcategory": "Gaming"
+    }
+]
